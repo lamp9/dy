@@ -1,0 +1,31 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('user')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input readonly id="c-name"  class="form-control" name="user" type="text" value="{$user}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">用户提问：</label>
+        <div class="col-xs-12 col-sm-8">
+            <input readonly id="c-contexts"  class="form-control" name="contexts" type="text" value="{$row.context}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">客服回答：</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-context"  class="form-control" name="context" type="text" value="">
+        </div>
+    </div>
+    <input type="hidden" value="{$row.id}" name="id">
+    <input type="hidden" value="{$pid}" name="pid">
+    <input type="hidden" value="{$row.user_id}" name="user_id">
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
